@@ -22,11 +22,6 @@
   <img src="./assets/about-life.svg?v=1" alt="Capabilities & Carousel" width="100%">
 </p>
 
-- 🎓 **Undergraduate Scholar:** Pursuing B.Tech in CSE (Artificial Intelligence) at **Vivekananda Institute of Professional Studies – Technical Campus (VIPS-TC)** (2024–2028 | **CGPA: 8.57 / 10**).
-- 🚀 **Founder & Community Lead:** Founded **TechVerse Solutions**, scaling an active developer community through hands-on AI workshops, hackathons, and builder incubators.
-- 🔬 **Research Intern @ IIIT-Delhi:** Edge AI sensor networks and real-time environmental IoT analytics; co-author on published patents and IEEE research papers.
-- 🏆 **Hackathon Podium Winner:** Won **2nd Place out of 8,000+ national developers** in the Zero Limit Hackathon with **CodeChrono**, an AI-driven developer telemetry platform.
-
 ---
 
 ## 🛠️ 02. Technical Architecture & Stack
