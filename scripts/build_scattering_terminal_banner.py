@@ -84,33 +84,17 @@ def build_banner(is_dark=True):
                     arr[y + 1, x] += err * 5 / 16
                     if x - 1 >= 0: arr[y + 1, x - 1] += err * 1 / 16
 
-    # 2. GENERATE CODE IMAGE DOTS
+    # 2. GENERATE ONLY BIG </> CODE SYMBOL DOTS
     code_img = Image.new('L', (W_GRID, H_GRID), 0)
     c_draw = ImageDraw.Draw(code_img)
 
-    # Big stylish </> in center
-    c_draw.text((70, 40), "</>", fill=255)
-    # Developer code lines
-    code_lines = [
-        "// AUTONOMOUS AGENT RUNTIME",
-        "class SystemOrchestrator {",
-        "  model = 'chakshu-v2';",
-        "  status = 'ACTIVE_FLOW';",
-        "  async deploy() {",
-        "    const agents = await Mesh.init({",
-        "      vision: 'YOLOv8',",
-        "      iot: 'ESP32_TELEMETRY',",
-        "      latency: '<50ms'",
-        "    });",
-        "    return agents.dispatch();",
-        "  }",
-        "}",
-        "// STATUS: 100% OPERATIONAL",
-        ">>> CODE_DISPATCH_COMPLETE",
-        ">>> MEMORY_STREAMS_SYNCED",
-    ]
-    for idx, line in enumerate(code_lines):
-        c_draw.text((25, 95 + idx * 14), line, fill=255)
+    # Bold, clean, iconic centered </> symbol
+    # Left bracket <
+    c_draw.line([(100, 105), (42, 170), (100, 235)], fill=255, width=16, joint='round')
+    # Center slash /
+    c_draw.line([(172, 90), (128, 250)], fill=255, width=16)
+    # Right bracket >
+    c_draw.line([(200, 105), (258, 170), (200, 235)], fill=255, width=16, joint='round')
 
     c_arr = np.array(code_img)
     c_binary = np.where(c_arr > 120, 1, 0).astype(np.uint8)
