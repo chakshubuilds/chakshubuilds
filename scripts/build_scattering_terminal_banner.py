@@ -1,7 +1,5 @@
-import math
-import random
 import numpy as np
-from PIL import Image, ImageEnhance, ImageOps, ImageFilter, ImageDraw, ImageFont
+from PIL import Image, ImageEnhance, ImageOps, ImageFilter
 
 def build_banner(is_dark=True):
     # Palette

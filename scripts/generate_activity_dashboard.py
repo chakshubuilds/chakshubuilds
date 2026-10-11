@@ -1,5 +1,3 @@
-import os
-
 activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" width="100%" height="100%">
   <defs>
     <style>
@@ -52,12 +50,10 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
     </linearGradient>
   </defs>
 
-  <!-- Container -->
   <rect width="920" height="310" rx="16" fill="#070b16" stroke="#1c284a" stroke-width="1.5" />
   <rect width="920" height="310" rx="16" fill="url(#act-dots)" />
   <path d="M 16 0 L 904 0" stroke="url(#act-top-bar)" stroke-width="2.5" />
 
-  <!-- Header -->
   <g transform="translate(32, 24)">
     <rect x="0" y="0" width="176" height="24" rx="12" fill="#090f20" stroke="#182442" />
     <circle cx="12" cy="12" r="4.5" fill="#10b981" class="beacon" />
@@ -68,43 +64,35 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
     <text x="0" y="70" class="font-sans" font-size="12.5" fill="#8ba0c8">Real-time metrics, commit velocity, autonomous agent handoffs, and domain distribution.</text>
   </g>
 
-  <!-- 3 Dashboard Panels -->
   <g transform="translate(32, 108)">
-
-    <!-- Panel 1: Activity Stats & Sprints -->
     <g transform="translate(0, 0)">
       <rect width="270" height="178" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <rect x="16" y="14" width="105" height="20" rx="4" fill="#090f20" stroke="#247bff" stroke-width="0.8" />
       <text x="24" y="28" class="font-mono" font-size="10" font-weight="700" fill="#247bff">01 // VELOCITY</text>
 
-      <!-- Stat 1 -->
       <g transform="translate(16, 46)">
         <text x="0" y="20" class="font-mono" font-size="24" font-weight="800" fill="#f8fafc">100%</text>
         <text x="76" y="16" class="font-mono" font-size="10" font-weight="700" fill="#10b981">● OPERATIONAL</text>
         <text x="0" y="36" class="font-sans" font-size="11.5" fill="#8ba0c8">Active Continuous Builder Mode</text>
       </g>
 
-      <!-- Stat 2 -->
       <g transform="translate(16, 96)">
         <text x="0" y="20" class="font-mono" font-size="24" font-weight="800" fill="#00f0ff">&gt;99.4%</text>
         <text x="96" y="16" class="font-mono" font-size="10" font-weight="700" fill="#00f0ff">HIGH PRECISION</text>
         <text x="0" y="36" class="font-sans" font-size="11.5" fill="#8ba0c8">Agent Tool Routing &amp; CI/CD Flow</text>
       </g>
 
-      <!-- Status Footer -->
       <a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;">
         <rect x="16" y="142" width="238" height="22" rx="6" fill="#090f20" stroke="#182442" />
         <text x="24" y="157" class="font-mono" font-size="9.5" font-weight="600" fill="#247bff">STATUS: SHIPPING @ CHAKSHUBUILDS</text>
       </a>
     </g>
 
-    <!-- Panel 2: Domain Breakdown (Visual Glowing Progress Bars) -->
     <g transform="translate(286, 0)">
       <rect width="284" height="178" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <rect x="16" y="14" width="135" height="20" rx="4" fill="#090f20" stroke="#00f0ff" stroke-width="0.8" />
       <text x="24" y="28" class="font-mono" font-size="10" font-weight="700" fill="#00f0ff">02 // DOMAIN_RATIO</text>
 
-      <!-- Bar 1: AI & Agents -->
       <g transform="translate(16, 44)">
         <text x="0" y="12" class="font-sans" font-size="11.5" font-weight="600" fill="#f8fafc">AI Agents &amp; PyTorch</text>
         <text x="252" y="12" text-anchor="end" class="font-mono" font-size="11" font-weight="700" fill="#247bff">42%</text>
@@ -112,7 +100,6 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
         <rect x="0" y="18" width="105" height="6" rx="3" fill="#247bff" class="bar-1" />
       </g>
 
-      <!-- Bar 2: Full-Stack -->
       <g transform="translate(16, 76)">
         <text x="0" y="12" class="font-sans" font-size="11.5" font-weight="600" fill="#f8fafc">Full-Stack &amp; Next.js 15</text>
         <text x="252" y="12" text-anchor="end" class="font-mono" font-size="11" font-weight="700" fill="#00f0ff">30%</text>
@@ -120,7 +107,6 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
         <rect x="0" y="18" width="75" height="6" rx="3" fill="#00f0ff" class="bar-2" />
       </g>
 
-      <!-- Bar 3: IoT Edge -->
       <g transform="translate(16, 108)">
         <text x="0" y="12" class="font-sans" font-size="11.5" font-weight="600" fill="#f8fafc">IoT Edge &amp; Computer Vision</text>
         <text x="252" y="12" text-anchor="end" class="font-mono" font-size="11" font-weight="700" fill="#ff354f">18%</text>
@@ -128,7 +114,6 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
         <rect x="0" y="18" width="45" height="6" rx="3" fill="#ff354f" class="bar-3" />
       </g>
 
-      <!-- Bar 4: Cloud & DevOps -->
       <g transform="translate(16, 140)">
         <text x="0" y="12" class="font-sans" font-size="11.5" font-weight="600" fill="#f8fafc">AWS, Docker &amp; CI/CD</text>
         <text x="252" y="12" text-anchor="end" class="font-mono" font-size="11" font-weight="700" fill="#10b981">10%</text>
@@ -137,19 +122,16 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
       </g>
     </g>
 
-    <!-- Panel 3: Velocity Waveform Sparkline & Milestones -->
     <g transform="translate(586, 0)">
       <rect width="270" height="178" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <rect x="16" y="14" width="132" height="20" rx="4" fill="#090f20" stroke="#10b981" stroke-width="0.8" />
       <text x="24" y="28" class="font-mono" font-size="10" font-weight="700" fill="#10b981">03 // COMMIT_BURST</text>
 
-      <!-- Mini Sparkline Waveform -->
       <g transform="translate(16, 42)">
         <path d="M 0 38 Q 20 10, 45 32 T 90 14 T 135 28 T 180 8 T 215 22 T 238 6 L 238 48 L 0 48 Z" fill="url(#spark-area)" />
         <path d="M 0 38 Q 20 10, 45 32 T 90 14 T 135 28 T 180 8 T 215 22 T 238 6" fill="none" stroke="url(#spark-grad)" stroke-width="2.2" class="sparkline" />
       </g>
 
-      <!-- Verified Milestone Tags -->
       <g transform="translate(16, 102)">
         <rect width="238" height="20" rx="4" fill="#090f20" stroke="#182442" />
         <text x="8" y="14" class="mono" font-size="9" fill="#f8fafc">🏆 2nd Place / 8k+ Devs (Zero Limit)</text>
@@ -163,11 +145,8 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
         <text x="8" y="14" class="mono" font-size="9" fill="#f8fafc">🚀 Founder @ TechVerse Solutions</text>
       </g>
     </g>
-
   </g>
 </svg>'''
 
 with open('assets/activity-dashboard.svg', 'w', encoding='utf-8') as f:
     f.write(activity_svg)
-
-print("Generated assets/activity-dashboard.svg")

@@ -1,8 +1,3 @@
-import os
-
-# Precise SVG icons
-# Dimensions: 18x18 viewBox="0 0 24 24"
-
 PYTHON_ICON = '''<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
   <path d="M11.9 1.5c-4.4 0-4.1 1.9-4.1 1.9l.01 2h4.2v.6H6.1S3.5 5.7 3.5 10.1c0 4.4 2.3 4.2 2.3 4.2h1.4v-2s-.1-2.3 2.3-2.3h4.1s2.2.04 2.2-2.2V3.7s.3-2.2-3.9-2.2zm-2.4 1.3a.8.8 0 110 1.6.8.8 0 010-1.6z" fill="#387eb8"/>
   <path d="M12.1 22.5c4.4 0 4.1-1.9 4.1-1.9l-.01-2h-4.2v-.6h5.9s2.6.3 2.6-4.1c0-4.4-2.3-4.2-2.3-4.2h-1.4v2s.1 2.3-2.3 2.3h-4.1s-2.2-.04-2.2 2.2v4.1s-.3 2.2 3.9 2.2zm2.4-1.3a.8.8 0 110-1.6.8.8 0 010-1.6z" fill="#ffe052"/>
@@ -109,56 +104,51 @@ GIT_ICON = '''<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
   <path d="M21.6 10.9L13.1 2.4c-.6-.6-1.5-.6-2.1 0L8.6 4.8l2.7 2.7c.6-.2 1.3-.1 1.8.4.5.5.7 1.2.5 1.8l2.6 2.6c.6-.2 1.3-.1 1.8.4.8.8.8 2.1 0 2.9-.8.8-2.1.8-2.9 0-.6-.6-.7-1.4-.4-2.1L12.1 11v5.1c.3.2.6.5.7.8.8.8.8 2.1 0 2.9-.8.8-2.1.8-2.9 0-.8-.8-.8-2.1 0-2.9.3-.3.6-.5.9-.6V9.8c-.3-.1-.7-.3-.9-.6-.6-.6-.7-1.4-.4-2.1L6.7 4.3 2.4 8.6c-.6.6-.6 1.5 0 2.1l8.5 8.5c.6.6 1.5.6 2.1 0l8.5-8.5c.6-.6.6-1.6.1-2.1v.3z" fill="#F05032"/>
 </svg>'''
 
-# Generate HTML / SVG for each badge pill
-def make_pill(x, y, w, h, icon_svg, label, badge_border="#1c284a", text_col="#f8fafc"):
+def make_pill(x, y, w, h, icon_svg, label):
     return f'''<g transform="translate({x}, {y})">
-      <rect width="{w}" height="{h}" rx="8" fill="#090f20" stroke="{badge_border}" stroke-width="1" />
+      <rect width="{w}" height="{h}" rx="8" fill="#090f20" stroke="rgba(36, 123, 255, 0.25)" stroke-width="1" />
       <g transform="translate(10, 7)">{icon_svg}</g>
-      <text x="36" y="21" class="font-sans" font-size="12" font-weight="600" fill="{text_col}">{label}</text>
+      <text x="36" y="21" class="font-sans" font-size="12" font-weight="600" fill="#f8fafc">{label}</text>
     </g>'''
 
-# Bento Categories
 cat_1_pills = [
-    (14, 44, 120, 32, PYTHON_ICON, "Python", "#387eb8"),
-    (144, 44, 134, 32, TS_ICON, "TypeScript", "#3178C6"),
-    (288, 44, 120, 32, JS_ICON, "JavaScript", "#F7DF1E"),
-    (14, 86, 105, 32, CPP_ICON, "C / C++", "#00599C"),
-    (129, 86, 95, 32, SQL_ICON, "SQL", "#336791"),
-    (234, 86, 174, 32, PYTHON_ICON, "MicroPython", "#387eb8"),
+    (14, 44, 120, 32, PYTHON_ICON, "Python"),
+    (144, 44, 134, 32, TS_ICON, "TypeScript"),
+    (288, 44, 120, 32, JS_ICON, "JavaScript"),
+    (14, 86, 105, 32, CPP_ICON, "C / C++"),
+    (129, 86, 95, 32, SQL_ICON, "SQL"),
+    (234, 86, 174, 32, PYTHON_ICON, "MicroPython"),
 ]
 
 cat_2_pills = [
-    (14, 44, 125, 32, PYTORCH_ICON, "PyTorch", "#EE4C2C"),
-    (149, 44, 135, 32, LANGCHAIN_ICON, "LangChain", "#10B981"),
-    (294, 44, 114, 32, FASTAPI_ICON, "FastAPI", "#05998B"),
-    (14, 86, 120, 32, OPENCV_ICON, "OpenCV", "#4285F4"),
-    (144, 86, 115, 32, OPENCV_ICON, "YOLOv8", "#EA4335"),
-    (269, 86, 139, 32, VECTORDB_ICON, "Vector DBs", "#A78BFA"),
+    (14, 44, 125, 32, PYTORCH_ICON, "PyTorch"),
+    (149, 44, 135, 32, LANGCHAIN_ICON, "LangChain"),
+    (294, 44, 114, 32, FASTAPI_ICON, "FastAPI"),
+    (14, 86, 120, 32, OPENCV_ICON, "OpenCV"),
+    (144, 86, 115, 32, OPENCV_ICON, "YOLOv8"),
+    (269, 86, 139, 32, VECTORDB_ICON, "Vector DBs"),
 ]
 
 cat_3_pills = [
-    (14, 44, 125, 32, NEXTJS_ICON, "Next.js 15", "#f8fafc"),
-    (149, 44, 115, 32, REACT_ICON, "React.js", "#61DAFB"),
-    (274, 44, 134, 32, NODE_ICON, "Node.js", "#5FA04E"),
-    (14, 86, 140, 32, TAILWIND_ICON, "Tailwind CSS", "#06B6D4"),
-    (164, 86, 115, 32, FASTAPI_ICON, "REST APIs", "#22D3EE"),
-    (289, 86, 119, 32, TS_ICON, "WebSockets", "#00f0ff"),
+    (14, 44, 125, 32, NEXTJS_ICON, "Next.js 15"),
+    (149, 44, 115, 32, REACT_ICON, "React.js"),
+    (274, 44, 134, 32, NODE_ICON, "Node.js"),
+    (14, 86, 140, 32, TAILWIND_ICON, "Tailwind CSS"),
+    (164, 86, 115, 32, FASTAPI_ICON, "REST APIs"),
+    (289, 86, 119, 32, TS_ICON, "WebSockets"),
 ]
 
 cat_4_pills = [
-    (14, 44, 120, 32, ESP32_ICON, "ESP32", "#00f0ff"),
-    (144, 44, 115, 32, DOCKER_ICON, "Docker", "#2496ED"),
-    (269, 44, 139, 32, AWS_ICON, "AWS Cloud", "#FF9900"),
-    (14, 86, 115, 32, GIT_ICON, "Git CI/CD", "#F05032"),
-    (139, 86, 110, 32, ESP32_ICON, "Arduino", "#00878F"),
-    (259, 86, 149, 32, DOCKER_ICON, "Linux Servers", "#f8fafc"),
+    (14, 44, 120, 32, ESP32_ICON, "ESP32"),
+    (144, 44, 115, 32, DOCKER_ICON, "Docker"),
+    (269, 44, 139, 32, AWS_ICON, "AWS Cloud"),
+    (14, 86, 115, 32, GIT_ICON, "Git CI/CD"),
+    (139, 86, 110, 32, ESP32_ICON, "Arduino"),
+    (259, 86, 149, 32, DOCKER_ICON, "Linux Servers"),
 ]
 
 def render_pills(pills):
-    res = []
-    for x, y, w, h, icon, label, col in pills:
-        res.append(make_pill(x, y, w, h, icon, label, badge_border="rgba(36, 123, 255, 0.25)", text_col="#f8fafc"))
-    return "\\n      ".join(res)
+    return "\\n      ".join(make_pill(x, y, w, h, icon, label) for x, y, w, h, icon, label in pills)
 
 svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" width="100%" height="100%">
   <defs>
@@ -185,12 +175,10 @@ svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" 
     </linearGradient>
   </defs>
 
-  <!-- Container -->
   <rect width="920" height="450" rx="16" fill="#070b16" stroke="#1c284a" stroke-width="1.5" />
   <rect width="920" height="450" rx="16" fill="url(#stk-dot-grid)" />
   <path d="M 16 0 L 904 0" stroke="url(#top-neon-bar)" stroke-width="2.5" />
 
-  <!-- Header -->
   <g transform="translate(32, 26)">
     <rect x="0" y="0" width="182" height="24" rx="12" fill="#090f20" stroke="#182442" />
     <circle cx="12" cy="12" r="4.5" fill="#247bff" />
@@ -200,9 +188,7 @@ svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" 
     <text x="0" y="74" class="font-sans" font-size="13" fill="#8ba0c8">High-concurrency systems, autonomous AI agents, and embedded edge devices with real official toolchains.</text>
   </g>
 
-  <!-- 4 Bento Cards (2x2 Grid) -->
   <g transform="translate(32, 116)">
-    <!-- Card 1: Core Languages -->
     <g transform="translate(0, 0)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#247bff" />
@@ -211,7 +197,6 @@ svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" 
       {render_pills(cat_1_pills)}
     </g>
 
-    <!-- Card 2: AI & Agents -->
     <g transform="translate(436, 0)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#ff354f" />
@@ -220,7 +205,6 @@ svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" 
       {render_pills(cat_2_pills)}
     </g>
 
-    <!-- Card 3: Web & Full-Stack -->
     <g transform="translate(0, 156)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#00f0ff" />
@@ -229,7 +213,6 @@ svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" 
       {render_pills(cat_3_pills)}
     </g>
 
-    <!-- Card 4: IoT & DevOps -->
     <g transform="translate(436, 156)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#10b981" />
@@ -242,5 +225,3 @@ svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 450" 
 
 with open('assets/stack.svg', 'w', encoding='utf-8') as f:
     f.write(svg_content)
-
-print("Generated new assets/stack.svg with official vector logos!")

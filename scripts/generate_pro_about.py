@@ -1,5 +1,4 @@
 import base64
-from PIL import Image
 
 def generate_about():
     with open('assets/portrait_highres.png', 'rb') as f:

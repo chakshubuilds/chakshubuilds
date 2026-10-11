@@ -23,12 +23,10 @@
     </linearGradient>
   </defs>
 
-  <!-- Container -->
   <rect width="920" height="450" rx="16" fill="#070b16" stroke="#1c284a" stroke-width="1.5" />
   <rect width="920" height="450" rx="16" fill="url(#stk-dot-grid)" />
   <path d="M 16 0 L 904 0" stroke="url(#top-neon-bar)" stroke-width="2.5" />
 
-  <!-- Header -->
   <g transform="translate(32, 26)">
     <rect x="0" y="0" width="182" height="24" rx="12" fill="#090f20" stroke="#182442" />
     <circle cx="12" cy="12" r="4.5" fill="#247bff" />
@@ -38,9 +36,7 @@
     <text x="0" y="74" class="font-sans" font-size="13" fill="#8ba0c8">High-concurrency systems, autonomous AI agents, and embedded edge devices with real official toolchains.</text>
   </g>
 
-  <!-- 4 Bento Cards (2x2 Grid) -->
   <g transform="translate(32, 116)">
-    <!-- Card 1: Core Languages -->
     <g transform="translate(0, 0)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#247bff" />
@@ -94,7 +90,6 @@
     </g>
     </g>
 
-    <!-- Card 2: AI & Agents -->
     <g transform="translate(436, 0)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#ff354f" />
@@ -155,7 +150,6 @@
     </g>
     </g>
 
-    <!-- Card 3: Web & Full-Stack -->
     <g transform="translate(0, 156)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#00f0ff" />
@@ -208,7 +202,6 @@
     </g>
     </g>
 
-    <!-- Card 4: IoT & DevOps -->
     <g transform="translate(436, 156)">
       <rect width="420" height="142" rx="12" fill="#0d1326" stroke="#1c284a" stroke-width="1.2" />
       <circle cx="22" cy="22" r="5" fill="#10b981" />
