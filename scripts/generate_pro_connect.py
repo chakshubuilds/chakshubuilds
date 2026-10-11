@@ -1,0 +1,149 @@
+import os
+
+connect_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+      .mono { font-family: 'Cascadia Code', monospace; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+      @keyframes radar-sweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .scanner-beam {
+        animation: radar-sweep 4s linear infinite;
+        transform-origin: 120px 140px;
+      }
+
+      @keyframes arrow-nudge {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(6px); }
+      }
+      .arrow-nudge { animation: arrow-nudge 1.6s ease-in-out infinite; }
+
+      @keyframes ping-glow {
+        0%, 100% { opacity: 0.9; transform: scale(1); }
+        50% { opacity: 0.3; transform: scale(1.3); }
+      }
+      .ping-dot { animation: ping-glow 2s infinite; transform-origin: 120px 140px; }
+    </style>
+
+    <pattern id="con-dots-2" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="rgba(36, 123, 255, 0.12)" />
+    </pattern>
+
+    <linearGradient id="con-top-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#247bff" />
+      <stop offset="50%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#ff354f" />
+    </linearGradient>
+
+    <linearGradient id="sweep-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(0, 240, 255, 0.6)" />
+      <stop offset="100%" stop-color="rgba(0, 240, 255, 0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect width="920" height="280" rx="16" fill="#070b16" stroke="#1c284a" stroke-width="1.5" />
+  <rect width="920" height="280" rx="16" fill="url(#con-dots-2)" />
+  <path d="M 16 0 L 904 0" stroke="url(#con-top-bar)" stroke-width="2.5" />
+
+  <!-- Left: Cyber Transmission & Holographic Radar HUD (No Image!) -->
+  <g transform="translate(32, 28)">
+    <rect width="250" height="224" rx="14" fill="#090f20" stroke="#1c284a" stroke-width="1.2" />
+
+    <!-- Header Pill -->
+    <rect x="16" y="14" width="144" height="20" rx="4" fill="#070b16" stroke="#00f0ff" stroke-width="0.8" />
+    <circle cx="26" cy="24" r="3" fill="#00f0ff" />
+    <text x="34" y="28" class="mono" font-size="9.5" font-weight="700" fill="#00f0ff">TRANSMISSION_HUB</text>
+    <text x="234" y="28" text-anchor="end" class="mono" font-size="9" fill="#5a7099">2.47 GHz</text>
+
+    <!-- Radar Circles -->
+    <g transform="translate(125, 122)">
+      <circle cx="0" cy="0" r="62" fill="none" stroke="#1c284a" stroke-width="1" />
+      <circle cx="0" cy="0" r="42" fill="none" stroke="rgba(36, 123, 255, 0.3)" stroke-width="1" stroke-dasharray="3 3" />
+      <circle cx="0" cy="0" r="22" fill="none" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1" />
+      <line x1="-62" y1="0" x2="62" y2="0" stroke="rgba(28, 40, 74, 0.8)" stroke-width="1" />
+      <line x1="0" y1="-62" x2="0" y2="62" stroke="rgba(28, 40, 74, 0.8)" stroke-width="1" />
+
+      <!-- Rotating Scanner Beam -->
+      <path d="M 0 0 L 44 -44 A 62 62 0 0 1 62 0 Z" fill="url(#sweep-gradient)" class="scanner-beam" style="transform-origin: 0 0;" />
+
+      <!-- Center Active Beacon -->
+      <circle cx="0" cy="0" r="4" fill="#00f0ff" class="ping-dot" />
+      <circle cx="0" cy="0" r="2.5" fill="#f8fafc" />
+    </g>
+
+    <!-- Bottom Status Text -->
+    <rect x="16" y="188" width="218" height="22" rx="5" fill="#070b16" stroke="#10b981" stroke-width="0.8" />
+    <circle cx="26" cy="199" r="3" fill="#10b981" />
+    <text x="36" y="203" class="mono" font-size="9.5" font-weight="700" fill="#10b981">SIGNAL: READY TO CONNECT</text>
+  </g>
+
+  <!-- Right: Header & 4 Social Cards in 2x2 Grid -->
+  <g transform="translate(308, 28)">
+    <rect x="0" y="0" width="168" height="20" rx="4" fill="#090f20" stroke="#182442" />
+    <text x="8" y="14" class="mono" font-size="9.5" font-weight="700" fill="#247bff">COMMUNICATION_CHANNELS</text>
+
+    <text x="0" y="46" class="sans" font-size="21" font-weight="800" fill="#f8fafc">Start a Conversation or Collaborate</text>
+    <text x="0" y="66" class="sans" font-size="12.5" fill="#8ba0c8">Open for autonomous AI systems, research projects, hackathons, and high-impact software.</text>
+
+    <!-- 4 Cards -->
+    <g transform="translate(0, 84)">
+      <!-- Card 1: GitHub -->
+      <g transform="translate(0, 0)">
+        <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
+        <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#247bff" stroke-width="1" />
+        <text x="23" y="34" class="mono" font-size="13" fill="#247bff">⚡</text>
+        <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">GITHUB_PROFILE</text>
+        <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">@chakshubuilds</text>
+        <g class="arrow-nudge" transform="translate(252, 30)">
+          <text x="0" y="4" class="mono" font-size="16" fill="#247bff">→</text>
+        </g>
+      </g>
+
+      <!-- Card 2: LinkedIn -->
+      <g transform="translate(298, 0)">
+        <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
+        <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#0a66c2" stroke-width="1" />
+        <text x="22" y="34" class="mono" font-size="12" font-weight="700" fill="#0a66c2">in</text>
+        <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">LINKEDIN_NETWORK</text>
+        <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">in/chakshuarora716</text>
+        <g class="arrow-nudge" transform="translate(252, 30)">
+          <text x="0" y="4" class="mono" font-size="16" fill="#0a66c2">→</text>
+        </g>
+      </g>
+
+      <!-- Card 3: Direct Email -->
+      <g transform="translate(0, 72)">
+        <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
+        <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#ff354f" stroke-width="1" />
+        <text x="21" y="34" class="mono" font-size="12" fill="#ff354f">✉</text>
+        <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">DIRECT_EMAIL</text>
+        <text x="52" y="42" class="sans" font-size="12" font-weight="700" fill="#f8fafc">chakshuarora098@gmail.com</text>
+        <g class="arrow-nudge" transform="translate(252, 30)">
+          <text x="0" y="4" class="mono" font-size="16" fill="#ff354f">→</text>
+        </g>
+      </g>
+
+      <!-- Card 4: Venture Lead -->
+      <g transform="translate(298, 72)">
+        <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
+        <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#10b981" stroke-width="1" />
+        <text x="22" y="34" class="mono" font-size="12" fill="#10b981">✦</text>
+        <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">BUILDER_VENTURE</text>
+        <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">TechVerse Solutions</text>
+        <g class="arrow-nudge" transform="translate(252, 30)">
+          <text x="0" y="4" class="mono" font-size="16" fill="#10b981">→</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>'''
+
+with open('assets/connect.svg', 'w', encoding='utf-8') as f:
+    f.write(connect_svg)
+
+print("Generated new assets/connect.svg without image!")
