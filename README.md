@@ -47,78 +47,30 @@
 
 ---
 
-## 🚀 04. Featured Systems & Research
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🤖 Orchestra AI — Autonomous Agent System</h3>
-      <p>High-concurrency multi-agent framework orchestrating autonomous business workflows, intelligent recruitment filtering, order resolution, and <strong>Mitra</strong> — a voice-enabled multimodal AI academic assistant.</p>
-      <ul>
-        <li><strong>Architecture:</strong> Python, LangChain, FastAPI, Redis, Vector DB</li>
-        <li><strong>Key Feature:</strong> Dynamic agent handoffs with context-preserving memory streams</li>
-      </ul>
-      <p><code>AI Agents</code> · <code>LangChain</code> · <code>FastAPI</code> · <code>Vector Search</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>⚡ CodeChrono — Developer Intelligence Platform</h3>
-      <p><strong>🥈 2nd Place / 8,000+ Developers (Zero Limit Hackathon)</strong></p>
-      <p>Real-time developer analytics platform offering semantic codebase indexing, contextual memory graphs, and automatic productivity telemetry for engineering teams.</p>
-      <ul>
-        <li><strong>Architecture:</strong> Next.js 15, TypeScript, FastAPI, Vector Embeddings</li>
-        <li><strong>Key Feature:</strong> Semantic AST traversal with sub-50ms search latency</li>
-      </ul>
-      <p><code>Next.js</code> · <code>TypeScript</code> · <code>Vector DB</code> · <code>Hackathon Winner</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🌐 TechVerse Ecosystem Platform</h3>
-      <p>Full-stack digital community and event portal powering workshops, hackathons, and project showcases for 500+ university developers across India.</p>
-      <ul>
-        <li><strong>Architecture:</strong> React.js, Node.js, Express.js, SQL, AWS (S3/EC2)</li>
-        <li><strong>Key Feature:</strong> Automated badge issuance, registration queues, and live leaderboards</li>
-      </ul>
-      <p><code>React.js</code> · <code>Node.js</code> · <code>AWS</code> · <code>Community</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🔬 Smart Environmental &amp; Traffic AI (IIIT-Delhi)</h3>
-      <p>Embedded edge sensor array combined with computer-vision surveillance for municipal air quality monitoring and vehicle density estimation.</p>
-      <ul>
-        <li><strong>Architecture:</strong> ESP32, Arduino, YOLOv8, PyTorch, Edge AI</li>
-        <li><strong>Recognition:</strong> <strong>Published Patent &amp; IEEE Conference Paper</strong></li>
-      </ul>
-      <p><code>ESP32</code> · <code>YOLOv8</code> · <code>IoT</code> · <code>IEEE Research</code></p>
-    </td>
-  </tr>
-</table>
-
----
-
-## 📊 05. Live Activity & Engineering Telemetry
+## 📊 04. Live Activity & Engineering Telemetry
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/activity-dashboard.svg?v=3" alt="Live Engineering Telemetry & Velocity" width="100%">
+  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/activity-dashboard.svg?v=4" alt="Live Engineering Telemetry & Velocity" width="100%">
 </p>
 
 ---
 
-## 🐍 06. Contribution Snake Pipeline
+## 🐍 05. Contribution Snake Pipeline
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/output/github-snake-dark.svg?v=3" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/output/github-snake.svg?v=3" />
-    <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/output/github-snake.svg?v=3" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/output/github-snake-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/output/github-snake.svg?v=4" />
+    <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/output/github-snake.svg?v=4" />
   </picture>
 </div>
 
 ---
 
-## 📬 07. Connect & Collaborate
+## 📬 06. Connect & Collaborate
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/connect.svg?v=3" alt="Connect with Chakshu" width="100%">
+  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/connect.svg?v=4" alt="Connect with Chakshu" width="100%">
 </p>
 
 <div align="center">
