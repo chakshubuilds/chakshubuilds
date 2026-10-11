@@ -42,7 +42,7 @@
 ## 🪪 03. Developer Telemetry & Passport
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/id-dashboard.svg?v=3" alt="Developer ID Dashboard" width="100%">
+  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/id-dashboard.svg?v=4" alt="Developer ID Dashboard" width="100%">
 </p>
 
 ---
