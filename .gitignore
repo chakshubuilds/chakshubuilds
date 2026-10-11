@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pdf
+preview_about.png
+about_rendered.png
+assets/desk_setup.png
+assets/portrait_exact.png
