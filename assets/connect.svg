@@ -91,51 +91,54 @@
     <!-- 4 Cards -->
     <g transform="translate(0, 84)">
       <!-- Card 1: GitHub -->
-      <g transform="translate(0, 0)">
-        <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
-        <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#247bff" stroke-width="1" />
-        <text x="23" y="34" class="mono" font-size="13" fill="#247bff">⚡</text>
-        <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">GITHUB_PROFILE</text>
-        <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">@chakshubuilds</text>
-        <g class="arrow-nudge" transform="translate(252, 30)">
-          <text x="0" y="4" class="mono" font-size="16" fill="#247bff">→</text>
+      <a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;">
+        <g transform="translate(0, 0)">
+          <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
+          <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#247bff" stroke-width="1" />
+          <text x="23" y="34" class="mono" font-size="13" fill="#247bff">⚡</text>
+          <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">GITHUB_PROFILE</text>
+          <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">@chakshubuilds</text>
+          <g class="arrow-nudge" transform="translate(254, 30)">
+            <text x="0" y="4" class="mono" font-size="16" fill="#247bff">→</text>
+          </g>
         </g>
-      </g>
+      </a>
 
       <!-- Card 2: LinkedIn -->
-      <g transform="translate(298, 0)">
-        <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
-        <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#0a66c2" stroke-width="1" />
-        <text x="22" y="34" class="mono" font-size="12" font-weight="700" fill="#0a66c2">in</text>
-        <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">LINKEDIN_NETWORK</text>
-        <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">in/chakshuarora716</text>
-        <g class="arrow-nudge" transform="translate(252, 30)">
-          <text x="0" y="4" class="mono" font-size="16" fill="#0a66c2">→</text>
+      <a href="https://www.linkedin.com/in/chakshuarora716/" target="_blank" style="text-decoration:none; cursor:pointer;">
+        <g transform="translate(298, 0)">
+          <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
+          <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#0a66c2" stroke-width="1" />
+          <text x="22" y="34" class="mono" font-size="12" font-weight="700" fill="#0a66c2">in</text>
+          <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">LINKEDIN_NETWORK</text>
+          <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">in/chakshuarora716</text>
+          <g class="arrow-nudge" transform="translate(254, 30)">
+            <text x="0" y="4" class="mono" font-size="16" fill="#0a66c2">→</text>
+          </g>
         </g>
-      </g>
+      </a>
 
       <!-- Card 3: Direct Email -->
-      <g transform="translate(0, 72)">
-        <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
-        <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#ff354f" stroke-width="1" />
-        <text x="21" y="34" class="mono" font-size="12" fill="#ff354f">✉</text>
-        <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">DIRECT_EMAIL</text>
-        <text x="52" y="42" class="sans" font-size="12" font-weight="700" fill="#f8fafc">chakshuarora098@gmail.com</text>
-        <g class="arrow-nudge" transform="translate(252, 30)">
-          <text x="0" y="4" class="mono" font-size="16" fill="#ff354f">→</text>
+      <a href="mailto:chakshuarora098@gmail.com" style="text-decoration:none; cursor:pointer;">
+        <g transform="translate(0, 72)">
+          <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
+          <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#ff354f" stroke-width="1" />
+          <text x="21" y="34" class="mono" font-size="12" fill="#ff354f">✉</text>
+          <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">DIRECT_EMAIL</text>
+          <text x="52" y="42" class="sans" font-size="11.5" font-weight="700" fill="#f8fafc">chakshuarora098@gmail.com</text>
+          <g class="arrow-nudge" transform="translate(254, 30)">
+            <text x="0" y="4" class="mono" font-size="16" fill="#ff354f">→</text>
+          </g>
         </g>
-      </g>
+      </a>
 
-      <!-- Card 4: Venture Lead -->
-      <g transform="translate(298, 72)">
+      <!-- Card 4: Venture Lead (Informational - No action / non-clickable) -->
+      <g transform="translate(298, 72)" style="cursor:default;">
         <rect width="282" height="60" rx="10" fill="#0d1428" stroke="#1c284a" stroke-width="1.2" />
         <circle cx="28" cy="30" r="14" fill="#070b16" stroke="#10b981" stroke-width="1" />
         <text x="22" y="34" class="mono" font-size="12" fill="#10b981">✦</text>
         <text x="52" y="24" class="mono" font-size="9.5" font-weight="700" fill="#5a7099">BUILDER_VENTURE</text>
         <text x="52" y="42" class="sans" font-size="13" font-weight="700" fill="#f8fafc">TechVerse Solutions</text>
-        <g class="arrow-nudge" transform="translate(252, 30)">
-          <text x="0" y="4" class="mono" font-size="16" fill="#10b981">→</text>
-        </g>
       </g>
     </g>
   </g>

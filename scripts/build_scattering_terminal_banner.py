@@ -208,7 +208,7 @@ def build_banner(is_dark=True):
         ("Subject", "Chakshu Arora"),
         ("Role", "AI Agent Architect & Full-Stack Builder"),
         ("Origin", "New Delhi, India"),
-        ("Education", "B.Tech CSE (AI) · VIPS-TC (CGPA 8.57)"),
+        ("Education", "AI Developer · VIPS-TC (CGPA 8.65)"),
         ("Status", "Building + Learning + Shipping"),
         ("ToolChain", "VS Code · Git · Docker · Linux · Postman"),
         ("Core.Lang", "Python · TypeScript · C++ · SQL"),
@@ -237,10 +237,20 @@ def build_banner(is_dark=True):
         leader_svg = f'<line x1="{x1:.0f}" y1="{cy - 4:.0f}" x2="{x2:.0f}" y2="{cy - 4:.0f}" stroke="{leader_col}" stroke-width="1.2" stroke-dasharray="2 4" />'
         val_escaped = val.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         label_escaped = label.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+        if label == "Grid.Mail":
+            val_render = f'<a href="mailto:chakshuarora098@gmail.com" style="text-decoration:none; cursor:pointer;"><text x="{val_right_x}" y="{cy}" text-anchor="end" class="mono" font-size="12.5" font-weight="600" fill="{accent_col}">{val_escaped}</text></a>'
+        elif label in ("Grid.Portfolio", "Grid.GitHub"):
+            val_render = f'<a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;"><text x="{val_right_x}" y="{cy}" text-anchor="end" class="mono" font-size="12.5" font-weight="600" fill="{ui_chrome}">{val_escaped}</text></a>'
+        elif label == "Grid.LinkedIn":
+            val_render = f'<a href="https://www.linkedin.com/in/chakshuarora716/" target="_blank" style="text-decoration:none; cursor:pointer;"><text x="{val_right_x}" y="{cy}" text-anchor="end" class="mono" font-size="12.5" font-weight="600" fill="{ui_chrome}">{val_escaped}</text></a>'
+        else:
+            val_render = f'<text x="{val_right_x}" y="{cy}" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">{val_escaped}</text>'
+
         row_str = f'''<g>
       <text x="{label_x}" y="{cy}" class="mono label-txt" font-size="13" font-weight="600">{label_escaped}</text>
       {leader_svg}
-      <text x="{val_right_x}" y="{cy}" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">{val_escaped}</text>
+      {val_render}
     </g>'''
         panel_rows_svg.append(row_str)
 
@@ -322,8 +332,10 @@ def build_banner(is_dark=True):
     <rect x="918" y="69" width="64" height="22" rx="4" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" stroke-width="1" />
     <circle cx="930" cy="80" r="4" fill="#ef4444" class="pulse-beacon" />
     <text x="942" y="84" class="mono" font-size="11" font-weight="700" fill="#ef4444">LIVE</text>
-    <rect x="996" y="69" width="144" height="22" rx="11" fill="{pill_bg}" stroke="{ui_chrome}" stroke-width="1.2" />
-    <text x="1068" y="84" text-anchor="middle" class="mono" font-size="11.5" font-weight="700" fill="{ui_chrome}">@chakshubuilds</text>
+    <a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;">
+      <rect x="996" y="69" width="144" height="22" rx="11" fill="{pill_bg}" stroke="{ui_chrome}" stroke-width="1.2" />
+      <text x="1068" y="84" text-anchor="middle" class="mono" font-size="11.5" font-weight="700" fill="{ui_chrome}">@chakshubuilds</text>
+    </a>
     {rows_svg}
   </g>
 </svg>'''

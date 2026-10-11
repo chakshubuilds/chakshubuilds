@@ -121,37 +121,37 @@ def make_pill(x, y, w, h, icon_svg, label, badge_border="#1c284a", text_col="#f8
 cat_1_pills = [
     (14, 44, 120, 32, PYTHON_ICON, "Python", "#387eb8"),
     (144, 44, 134, 32, TS_ICON, "TypeScript", "#3178C6"),
-    (288, 44, 126, 32, JS_ICON, "JavaScript", "#F7DF1E"),
+    (288, 44, 120, 32, JS_ICON, "JavaScript", "#F7DF1E"),
     (14, 86, 105, 32, CPP_ICON, "C / C++", "#00599C"),
     (129, 86, 95, 32, SQL_ICON, "SQL", "#336791"),
-    (234, 86, 180, 32, PYTHON_ICON, "MicroPython", "#387eb8"),
+    (234, 86, 174, 32, PYTHON_ICON, "MicroPython", "#387eb8"),
 ]
 
 cat_2_pills = [
     (14, 44, 125, 32, PYTORCH_ICON, "PyTorch", "#EE4C2C"),
     (149, 44, 135, 32, LANGCHAIN_ICON, "LangChain", "#10B981"),
-    (294, 44, 120, 32, FASTAPI_ICON, "FastAPI", "#05998B"),
+    (294, 44, 114, 32, FASTAPI_ICON, "FastAPI", "#05998B"),
     (14, 86, 120, 32, OPENCV_ICON, "OpenCV", "#4285F4"),
     (144, 86, 115, 32, OPENCV_ICON, "YOLOv8", "#EA4335"),
-    (269, 86, 145, 32, VECTORDB_ICON, "Vector DBs", "#A78BFA"),
+    (269, 86, 139, 32, VECTORDB_ICON, "Vector DBs", "#A78BFA"),
 ]
 
 cat_3_pills = [
     (14, 44, 125, 32, NEXTJS_ICON, "Next.js 15", "#f8fafc"),
     (149, 44, 115, 32, REACT_ICON, "React.js", "#61DAFB"),
-    (274, 44, 140, 32, NODE_ICON, "Node.js", "#5FA04E"),
+    (274, 44, 134, 32, NODE_ICON, "Node.js", "#5FA04E"),
     (14, 86, 140, 32, TAILWIND_ICON, "Tailwind CSS", "#06B6D4"),
     (164, 86, 115, 32, FASTAPI_ICON, "REST APIs", "#22D3EE"),
-    (289, 86, 125, 32, TS_ICON, "WebSockets", "#00f0ff"),
+    (289, 86, 119, 32, TS_ICON, "WebSockets", "#00f0ff"),
 ]
 
 cat_4_pills = [
     (14, 44, 120, 32, ESP32_ICON, "ESP32", "#00f0ff"),
     (144, 44, 115, 32, DOCKER_ICON, "Docker", "#2496ED"),
-    (269, 44, 145, 32, AWS_ICON, "AWS Cloud", "#FF9900"),
+    (269, 44, 139, 32, AWS_ICON, "AWS Cloud", "#FF9900"),
     (14, 86, 115, 32, GIT_ICON, "Git CI/CD", "#F05032"),
     (139, 86, 110, 32, ESP32_ICON, "Arduino", "#00878F"),
-    (259, 86, 155, 32, DOCKER_ICON, "Linux Servers", "#f8fafc"),
+    (259, 86, 149, 32, DOCKER_ICON, "Linux Servers", "#f8fafc"),
 ]
 
 def render_pills(pills):

@@ -1021,8 +1021,10 @@
     <rect x="918" y="69" width="64" height="22" rx="4" fill="rgba(239, 68, 68, 0.15)" stroke="#ef4444" stroke-width="1" />
     <circle cx="930" cy="80" r="4" fill="#ef4444" class="pulse-beacon" />
     <text x="942" y="84" class="mono" font-size="11" font-weight="700" fill="#ef4444">LIVE</text>
-    <rect x="996" y="69" width="144" height="22" rx="11" fill="#e2e8f0" stroke="#0891B2" stroke-width="1.2" />
-    <text x="1068" y="84" text-anchor="middle" class="mono" font-size="11.5" font-weight="700" fill="#0891B2">@chakshubuilds</text>
+    <a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;">
+      <rect x="996" y="69" width="144" height="22" rx="11" fill="#e2e8f0" stroke="#0891B2" stroke-width="1.2" />
+      <text x="1068" y="84" text-anchor="middle" class="mono" font-size="11.5" font-weight="700" fill="#0891B2">@chakshubuilds</text>
+    </a>
     <g>
       <text x="478" y="126.0" class="mono label-txt" font-size="13" font-weight="600">Subject</text>
       <line x1="552" y1="122" x2="1029" y2="122" stroke="rgba(8, 145, 178, 0.25)" stroke-width="1.2" stroke-dasharray="2 4" />
@@ -1040,8 +1042,8 @@
     </g>
     <g>
       <text x="478" y="199.5" class="mono label-txt" font-size="13" font-weight="600">Education</text>
-      <line x1="568" y1="196" x2="847" y2="196" stroke="rgba(8, 145, 178, 0.25)" stroke-width="1.2" stroke-dasharray="2 4" />
-      <text x="1142" y="199.5" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">B.Tech CSE (AI) · VIPS-TC (CGPA 8.57)</text>
+      <line x1="568" y1="196" x2="870" y2="196" stroke="rgba(8, 145, 178, 0.25)" stroke-width="1.2" stroke-dasharray="2 4" />
+      <text x="1142" y="199.5" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">AI Developer · VIPS-TC (CGPA 8.65)</text>
     </g>
     <g>
       <text x="478" y="224.0" class="mono label-txt" font-size="13" font-weight="600">Status</text>
@@ -1081,22 +1083,22 @@
     <g>
       <text x="478" y="395.5" class="mono label-txt" font-size="13" font-weight="600">Grid.Mail</text>
       <line x1="568" y1="392" x2="938" y2="392" stroke="rgba(8, 145, 178, 0.25)" stroke-width="1.2" stroke-dasharray="2 4" />
-      <text x="1142" y="395.5" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">chakshuarora098@gmail.com</text>
+      <a href="mailto:chakshuarora098@gmail.com" style="text-decoration:none; cursor:pointer;"><text x="1142" y="395.5" text-anchor="end" class="mono" font-size="12.5" font-weight="600" fill="#059669">chakshuarora098@gmail.com</text></a>
     </g>
     <g>
       <text x="478" y="420.0" class="mono label-txt" font-size="13" font-weight="600">Grid.Portfolio</text>
       <line x1="611" y1="416" x2="946" y2="416" stroke="rgba(8, 145, 178, 0.25)" stroke-width="1.2" stroke-dasharray="2 4" />
-      <text x="1142" y="420.0" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">github.com/chakshubuilds</text>
+      <a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;"><text x="1142" y="420.0" text-anchor="end" class="mono" font-size="12.5" font-weight="600" fill="#0891B2">github.com/chakshubuilds</text></a>
     </g>
     <g>
       <text x="478" y="444.5" class="mono label-txt" font-size="13" font-weight="600">Grid.LinkedIn</text>
       <line x1="602" y1="440" x2="991" y2="440" stroke="rgba(8, 145, 178, 0.25)" stroke-width="1.2" stroke-dasharray="2 4" />
-      <text x="1142" y="444.5" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">in/chakshuarora716</text>
+      <a href="https://www.linkedin.com/in/chakshuarora716/" target="_blank" style="text-decoration:none; cursor:pointer;"><text x="1142" y="444.5" text-anchor="end" class="mono" font-size="12.5" font-weight="600" fill="#0891B2">in/chakshuarora716</text></a>
     </g>
     <g>
       <text x="478" y="469.0" class="mono label-txt" font-size="13" font-weight="600">Grid.GitHub</text>
       <line x1="586" y1="465" x2="1022" y2="465" stroke="rgba(8, 145, 178, 0.25)" stroke-width="1.2" stroke-dasharray="2 4" />
-      <text x="1142" y="469.0" text-anchor="end" class="mono val-txt" font-size="12.5" font-weight="500">@chakshubuilds</text>
+      <a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;"><text x="1142" y="469.0" text-anchor="end" class="mono" font-size="12.5" font-weight="600" fill="#0891B2">@chakshubuilds</text></a>
     </g>
     <g>
       <text x="478" y="493.5" class="mono label-txt" font-size="13" font-weight="600">Grid.Community</text>

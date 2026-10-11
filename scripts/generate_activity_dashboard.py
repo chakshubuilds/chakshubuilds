@@ -92,8 +92,10 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
       </g>
 
       <!-- Status Footer -->
-      <rect x="16" y="142" width="238" height="22" rx="6" fill="#090f20" stroke="#182442" />
-      <text x="24" y="157" class="font-mono" font-size="10" fill="#247bff">STATUS: SHIPPING @ CHAKSHUBUILDS</text>
+      <a href="https://github.com/chakshubuilds" target="_blank" style="text-decoration:none; cursor:pointer;">
+        <rect x="16" y="142" width="238" height="22" rx="6" fill="#090f20" stroke="#182442" />
+        <text x="24" y="157" class="font-mono" font-size="9.5" font-weight="600" fill="#247bff">STATUS: SHIPPING @ CHAKSHUBUILDS</text>
+      </a>
     </g>
 
     <!-- Panel 2: Domain Breakdown (Visual Glowing Progress Bars) -->
@@ -150,15 +152,15 @@ activity_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" 
       <!-- Verified Milestone Tags -->
       <g transform="translate(16, 102)">
         <rect width="238" height="20" rx="4" fill="#090f20" stroke="#182442" />
-        <text x="8" y="14" class="mono" font-size="9.5" fill="#f8fafc">🏆 2nd Place / 8k+ Devs (Zero Limit)</text>
+        <text x="8" y="14" class="mono" font-size="9" fill="#f8fafc">🏆 2nd Place / 8k+ Devs (Zero Limit)</text>
       </g>
       <g transform="translate(16, 126)">
         <rect width="238" height="20" rx="4" fill="#090f20" stroke="#182442" />
-        <text x="8" y="14" class="mono" font-size="9.5" fill="#f8fafc">📜 1 Patent &amp; 1 IEEE Research Paper</text>
+        <text x="8" y="14" class="mono" font-size="9" fill="#f8fafc">📜 1 Patent &amp; 1 IEEE Research Paper</text>
       </g>
       <g transform="translate(16, 150)">
         <rect width="238" height="20" rx="4" fill="#090f20" stroke="#182442" />
-        <text x="8" y="14" class="mono" font-size="9.5" fill="#f8fafc">🚀 Founder @ TechVerse Solutions</text>
+        <text x="8" y="14" class="mono" font-size="9" fill="#f8fafc">🚀 Founder @ TechVerse Solutions</text>
       </g>
     </g>
 
