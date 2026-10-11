@@ -17,7 +17,7 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/about-life.svg?v=3" alt="01. About & Engineering Matrix" width="100%">
+  <img src="https://raw.githubusercontent.com/chakshubuilds/chakshubuilds/main/assets/about-life.svg?v=4" alt="01. About &amp; Engineering Matrix" width="100%">
 </p>
 
 ---
