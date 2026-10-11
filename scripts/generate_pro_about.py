@@ -41,9 +41,15 @@ def generate_about():
       <rect x="0" y="0" width="130" height="138" rx="14" />
     </clipPath>
 
-    <clipPath id="desk-clip">
-      <rect x="0" y="0" width="194" height="144" rx="12" />
+    <clipPath id="bento-container-clip">
+      <rect x="0" y="0" width="533" height="182" rx="14" />
     </clipPath>
+
+    <linearGradient id="desk-edge-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b1329" stop-opacity="1" />
+      <stop offset="35%" stop-color="#0b1329" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0b1329" stop-opacity="0" />
+    </linearGradient>
 
     <pattern id="dot-grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="rgba(56, 189, 248, 0.05)" />
@@ -278,27 +284,30 @@ def generate_about():
   </g>
 
   <!-- ================= RIGHT BOTTOM: CURRENTLY BUILDING ================= -->
-  <g transform="translate(435, 298)">
+  <g transform="translate(435, 288)">
     <!-- Main Card Body -->
-    <rect width="565" height="230" rx="16" fill="#080e1e" stroke="#1c284a" stroke-width="1.2" />
+    <rect width="565" height="240" rx="16" fill="#080e1e" stroke="#1c284a" stroke-width="1.2" />
 
-    <!-- Header -->
-    <g transform="translate(20, 24)">
+    <!-- Header (shifted up, builder button removed) -->
+    <g transform="translate(20, 18)">
       <!-- Folder Icon -->
       <path d="M 3 5 H 8 L 10 7 H 17 V 15 H 3 Z" fill="none" stroke="#38bdf8" stroke-width="1.4" stroke-linejoin="round" />
       <text x="25" y="14" font-size="16" font-weight="800" fill="#ffffff" letter-spacing="0.4">Currently<tspan dx="8" fill="url(#cyan-purple)">Building</tspan></text>
-      
-      <!-- Builder Pill Badge -->
-      <g transform="translate(435, 2)">
-        <rect x="0" y="-3" width="110" height="18" rx="9" fill="#042f2e" stroke="#059669" stroke-width="0.8" />
-        <circle cx="10" cy="6" r="3.5" fill="#10b981" class="green-pulse" />
-        <text x="20" y="9.5" font-size="8.5" font-weight="700" fill="#34d399" letter-spacing="1.2">BUILDER // 2026</text>
-      </g>
     </g>
 
     <!-- Inner Bento Container -->
-    <g transform="translate(16, 44)">
-      <rect width="533" height="170" rx="14" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+    <g transform="translate(16, 40)">
+      <!-- Card background -->
+      <rect width="533" height="182" rx="14" fill="#0b1329" />
+
+      <!-- Clipped Image touching top, right, and bottom boundaries of the container -->
+      <g clip-path="url(#bento-container-clip)">
+        <image href="data:image/png;base64,{d_b64}" x="305" y="0" width="228" height="182" preserveAspectRatio="xMidYMid slice" />
+        <rect x="305" y="0" width="55" height="182" fill="url(#desk-edge-fade)" />
+      </g>
+
+      <!-- Card container border -->
+      <rect width="533" height="182" rx="14" fill="none" stroke="#1e293b" stroke-width="1" />
 
       <!-- Left Text Content -->
       <g transform="translate(18, 18)">
@@ -316,39 +325,25 @@ def generate_about():
           <tspan x="0" dy="17">Programming principles.</tspan>
         </text>
 
-        <!-- 4 Hashtag Pills (Clean Two-Row Grid that never collides with desk image) -->
-        <g transform="translate(0, 104)">
+        <!-- 5 Hashtag Pills (Clean Two-Row Grid with ample spacing) -->
+        <g transform="translate(0, 105)">
           <!-- Row 1 -->
-          <!-- #DeepWork -->
           <rect x="0" y="0" width="76" height="19" rx="9.5" fill="#0f172a" stroke="#1e293b" stroke-width="0.8" />
           <text x="38" y="13" font-size="8.5" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.3">#DeepWork</text>
 
-          <!-- #SystemDesign -->
           <rect x="84" y="0" width="94" height="19" rx="9.5" fill="#0f172a" stroke="#1e293b" stroke-width="0.8" />
           <text x="131" y="13" font-size="8.5" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.3">#SystemDesign</text>
 
-          <!-- #ShipCraft -->
           <rect x="186" y="0" width="76" height="19" rx="9.5" fill="#0f172a" stroke="#1e293b" stroke-width="0.8" />
           <text x="224" y="13" font-size="8.5" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.3">#ShipCraft</text>
 
           <!-- Row 2 -->
-          <!-- #ZeroDistractions -->
           <rect x="0" y="24" width="108" height="19" rx="9.5" fill="#0f172a" stroke="#1e293b" stroke-width="0.8" />
           <text x="54" y="37" font-size="8.5" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.3">#ZeroDistractions</text>
 
-          <!-- #ContinuousBuilder -->
           <rect x="116" y="24" width="116" height="19" rx="9.5" fill="#0f172a" stroke="#1e293b" stroke-width="0.8" />
           <text x="174" y="37" font-size="8.5" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.3">#ContinuousBuilder</text>
         </g>
-      </g>
-
-      <!-- Right Visual: Midnight Desk Setup -->
-      <g transform="translate(325, 13)">
-        <rect x="-2" y="-2" width="198" height="148" rx="14" fill="none" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1.2" />
-        <g clip-path="url(#desk-clip)">
-          <image href="data:image/png;base64,{d_b64}" x="0" y="0" width="194" height="144" preserveAspectRatio="xMidYMid slice" />
-        </g>
-        <rect x="0" y="0" width="194" height="144" rx="12" fill="none" stroke="#1e293b" stroke-width="1" />
       </g>
     </g>
   </g>
