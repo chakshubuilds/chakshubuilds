@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+      .mono { font-family: 'Cascadia Code', monospace; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+      /* Orbital Rotations */
+      @keyframes orbit-cw {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbit-ccw {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
+      }
+      .orbit-ring-1 { animation: orbit-cw 20s linear infinite; transform-origin: 460px 105px; }
+      .orbit-ring-2 { animation: orbit-ccw 26s linear infinite; transform-origin: 460px 105px; }
+      .orbit-ring-3 { animation: orbit-cw 34s linear infinite; transform-origin: 460px 105px; }
+
+      @keyframes nucleus-glow {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.12); opacity: 0.5; }
+      }
+      .nucleus { animation: nucleus-glow 3s ease-in-out infinite; transform-origin: 460px 105px; }
+    </style>
+
+    <pattern id="stk-dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="rgba(36, 123, 255, 0.12)" />
+    </pattern>
+
+    <linearGradient id="stk-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#247bff" />
+      <stop offset="50%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#ff354f" />
+    </linearGradient>
+
+    <radialGradient id="nuc-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#247bff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#247bff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="920" height="380" rx="20" fill="#070b16" stroke="#1c284a" stroke-width="1.5" />
+  <rect width="920" height="380" rx="20" fill="url(#stk-dots)" />
+  <path d="M 20 0 L 900 0" stroke="url(#stk-grad)" stroke-width="3" />
+
+  <!-- Top Orbit System -->
+  <g>
+    <!-- Background Ellipses (tilted) -->
+    <ellipse cx="460" cy="105" rx="360" ry="60" fill="none" stroke="rgba(36, 123, 255, 0.22)" stroke-width="1.2" transform="rotate(-6, 460, 105)" stroke-dasharray="6 4" />
+    <ellipse cx="460" cy="105" rx="270" ry="48" fill="none" stroke="rgba(0, 240, 255, 0.28)" stroke-width="1.2" transform="rotate(8, 460, 105)" stroke-dasharray="5 3" />
+    <ellipse cx="460" cy="105" rx="170" ry="36" fill="none" stroke="rgba(255, 53, 79, 0.32)" stroke-width="1.4" transform="rotate(-15, 460, 105)" stroke-dasharray="4 3" />
+
+    <!-- Center Nucleus Core -->
+    <circle cx="460" cy="105" r="38" fill="url(#nuc-glow)" class="nucleus" />
+    <circle cx="460" cy="105" r="22" fill="#0d1428" stroke="#00f0ff" stroke-width="1.5" />
+    <text x="460" y="102" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#00f0ff">ACTIVE</text>
+    <text x="460" y="114" text-anchor="middle" class="mono" font-size="9" font-weight="600" fill="#799ed4">RUNTIME</text>
+
+    <!-- Orbit 1 Rotating Nodes (Inner: Python, TypeScript, C++) -->
+    <g class="orbit-ring-1">
+      <g transform="translate(300, 92)">
+        <rect width="60" height="24" rx="12" fill="#0b1224" stroke="#ff354f" stroke-width="1" />
+        <text x="30" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#ff354f">Python</text>
+      </g>
+      <g transform="translate(560, 92)">
+        <rect width="78" height="24" rx="12" fill="#0b1224" stroke="#ff354f" stroke-width="1" />
+        <text x="39" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#ff354f">TypeScript</text>
+      </g>
+    </g>
+
+    <!-- Orbit 2 Rotating Nodes (Middle: PyTorch, LangChain, Next.js, FastAPI) -->
+    <g class="orbit-ring-2">
+      <g transform="translate(205, 92)">
+        <rect width="68" height="24" rx="12" fill="#0b1224" stroke="#00f0ff" stroke-width="1" />
+        <text x="34" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#00f0ff">PyTorch</text>
+      </g>
+      <g transform="translate(645, 92)">
+        <rect width="78" height="24" rx="12" fill="#0b1224" stroke="#00f0ff" stroke-width="1" />
+        <text x="39" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#00f0ff">LangChain</text>
+      </g>
+      <g transform="translate(425, 42)">
+        <rect width="70" height="24" rx="12" fill="#0b1224" stroke="#00f0ff" stroke-width="1" />
+        <text x="35" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#00f0ff">Next.js 15</text>
+      </g>
+      <g transform="translate(425, 144)">
+        <rect width="66" height="24" rx="12" fill="#0b1224" stroke="#00f0ff" stroke-width="1" />
+        <text x="33" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#00f0ff">FastAPI</text>
+      </g>
+    </g>
+
+    <!-- Orbit 3 Rotating Nodes (Outer: Docker, AWS, ESP32, PostgreSQL) -->
+    <g class="orbit-ring-3">
+      <g transform="translate(115, 92)">
+        <rect width="62" height="24" rx="12" fill="#0b1224" stroke="#247bff" stroke-width="1" />
+        <text x="31" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#247bff">Docker</text>
+      </g>
+      <g transform="translate(745, 92)">
+        <rect width="58" height="24" rx="12" fill="#0b1224" stroke="#247bff" stroke-width="1" />
+        <text x="29" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#247bff">ESP32</text>
+      </g>
+      <g transform="translate(435, 12)">
+        <rect width="50" height="24" rx="12" fill="#0b1224" stroke="#247bff" stroke-width="1" />
+        <text x="25" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#247bff">AWS</text>
+      </g>
+      <g transform="translate(420, 172)">
+        <rect width="80" height="24" rx="12" fill="#0b1224" stroke="#247bff" stroke-width="1" />
+        <text x="40" y="16" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#247bff">PostgreSQL</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Categorized Tech Stack Chips -->
+  <g transform="translate(36, 216)">
+    <!-- Row 1: Languages & AI -->
+    <g transform="translate(0, 0)">
+      <rect width="414" height="66" rx="12" fill="#0b1224" stroke="#1c284a" />
+      <text x="16" y="24" class="mono" font-size="10.5" font-weight="700" fill="#ff354f">01 // LANGUAGES</text>
+      <g transform="translate(16, 34)">
+        <text x="0" y="14" class="mono" font-size="11.5" fill="#f8fafc">Python · TypeScript · C · C++ · JavaScript · SQL</text>
+      </g>
+    </g>
+
+    <g transform="translate(434, 0)">
+      <rect width="414" height="66" rx="12" fill="#0b1224" stroke="#1c284a" />
+      <text x="16" y="24" class="mono" font-size="10.5" font-weight="700" fill="#00f0ff">02 // AI, AGENTS &amp; VISION</text>
+      <g transform="translate(16, 34)">
+        <text x="0" y="14" class="mono" font-size="11.5" fill="#f8fafc">PyTorch · LangChain · YOLOv8 · OpenCV · Vector DBs</text>
+      </g>
+    </g>
+
+    <!-- Row 2: Full Stack & Edge/Cloud -->
+    <g transform="translate(0, 78)">
+      <rect width="414" height="66" rx="12" fill="#0b1224" stroke="#1c284a" />
+      <text x="16" y="24" class="mono" font-size="10.5" font-weight="700" fill="#247bff">03 // WEB &amp; FULL STACK</text>
+      <g transform="translate(16, 34)">
+        <text x="0" y="14" class="mono" font-size="11.5" fill="#f8fafc">Next.js · React · Node.js · FastAPI · Tailwind CSS · REST</text>
+      </g>
+    </g>
+
+    <g transform="translate(434, 78)">
+      <rect width="414" height="66" rx="12" fill="#0b1224" stroke="#1c284a" />
+      <text x="16" y="24" class="mono" font-size="10.5" font-weight="700" fill="#10b981">04 // EDGE IOT &amp; CLOUD INFRA</text>
+      <g transform="translate(16, 34)">
+        <text x="0" y="14" class="mono" font-size="11.5" fill="#f8fafc">ESP32 · Arduino · Docker · AWS (S3/EC2) · Linux · Git CI/CD</text>
+      </g>
+    </g>
+  </g>
+</svg>

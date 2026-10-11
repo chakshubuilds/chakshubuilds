@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+      .mono { font-family: 'Cascadia Code', monospace; }
+      .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+      /* 3-Segment Progress Bars (12s total cycle, 4s each) */
+      @keyframes pbar-1 {
+        0% { width: 0px; }
+        30% { width: 120px; }
+        33.3%, 100% { width: 120px; }
+      }
+      @keyframes pbar-2 {
+        0%, 33.3% { width: 0px; }
+        63.3% { width: 120px; }
+        66.6%, 100% { width: 120px; }
+      }
+      @keyframes pbar-3 {
+        0%, 66.6% { width: 0px; }
+        96.6% { width: 120px; }
+        100% { width: 120px; }
+      }
+      .progress-fill-1 { animation: pbar-1 12s cubic-bezier(0.2, 0, 0.3, 1) infinite; }
+      .progress-fill-2 { animation: pbar-2 12s cubic-bezier(0.2, 0, 0.3, 1) infinite; }
+      .progress-fill-3 { animation: pbar-3 12s cubic-bezier(0.2, 0, 0.3, 1) infinite; }
+
+      /* 3 Carousel Slides */
+      @keyframes slide-fade-1 {
+        0%, 30% { opacity: 1; transform: translateY(0); }
+        33.3%, 97% { opacity: 0; transform: translateY(6px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes slide-fade-2 {
+        0%, 30% { opacity: 0; transform: translateY(6px); }
+        33.3%, 63.3% { opacity: 1; transform: translateY(0); }
+        66.6%, 100% { opacity: 0; transform: translateY(6px); }
+      }
+      @keyframes slide-fade-3 {
+        0%, 63.3% { opacity: 0; transform: translateY(6px); }
+        66.6%, 96.6% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(6px); }
+      }
+      .slide-1 { animation: slide-fade-1 12s infinite; }
+      .slide-2 { animation: slide-fade-2 12s infinite; }
+      .slide-3 { animation: slide-fade-3 12s infinite; }
+    </style>
+
+    <pattern id="abt-dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="rgba(36, 123, 255, 0.12)" />
+    </pattern>
+
+    <linearGradient id="abt-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#247bff" />
+      <stop offset="100%" stop-color="#ff354f" />
+    </linearGradient>
+  </defs>
+
+  <rect width="920" height="340" rx="20" fill="#070b16" stroke="#1c284a" stroke-width="1.5" />
+  <rect width="920" height="340" rx="20" fill="url(#abt-dots)" />
+  <path d="M 20 0 L 900 0" stroke="url(#abt-grad)" stroke-width="3" />
+
+  <!-- Left Column: Core Engineering Capabilities -->
+  <g transform="translate(36, 32)">
+    <rect x="0" y="0" width="170" height="24" rx="6" fill="#0d1428" stroke="#1e2c50" />
+    <text x="12" y="16" class="mono" font-size="11" font-weight="700" fill="#247bff">CORE_CAPABILITIES</text>
+    <text x="0" y="52" class="sans" font-size="22" font-weight="700" fill="#f8fafc">Engineering Matrix</text>
+
+    <!-- Card 1 -->
+    <g transform="translate(0, 68)">
+      <rect width="395" height="62" rx="10" fill="#0b1224" stroke="#1c284a" stroke-width="1" />
+      <circle cx="22" cy="31" r="10" fill="rgba(36, 123, 255, 0.15)" stroke="#247bff" />
+      <text x="18" y="35" class="mono" font-size="12" fill="#247bff">⚡</text>
+      <text x="44" y="24" class="sans" font-size="13.5" font-weight="700" fill="#f8fafc">Autonomous Multi-Agent Platforms</text>
+      <text x="44" y="44" class="sans" font-size="12" fill="#8ba0c8">LangChain, memory graphs, sub-50ms tool handoffs (Orchestra AI)</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(0, 138)">
+      <rect width="395" height="62" rx="10" fill="#0b1224" stroke="#1c284a" stroke-width="1" />
+      <circle cx="22" cy="31" r="10" fill="rgba(255, 53, 79, 0.15)" stroke="#ff354f" />
+      <text x="18" y="35" class="mono" font-size="12" fill="#ff354f">🔬</text>
+      <text x="44" y="24" class="sans" font-size="13.5" font-weight="700" fill="#f8fafc">Edge AI &amp; Real-Time Computer Vision</text>
+      <text x="44" y="44" class="sans" font-size="12" fill="#8ba0c8">YOLOv8 vision detection, ESP32 sensor mesh (IEEE paper &amp; patent)</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(0, 208)">
+      <rect width="395" height="62" rx="10" fill="#0b1224" stroke="#1c284a" stroke-width="1" />
+      <circle cx="22" cy="31" r="10" fill="rgba(0, 240, 255, 0.15)" stroke="#00f0ff" />
+      <text x="18" y="35" class="mono" font-size="12" fill="#00f0ff">🌐</text>
+      <text x="44" y="24" class="sans" font-size="13.5" font-weight="700" fill="#f8fafc">Production Full-Stack &amp; Ecosystems</text>
+      <text x="44" y="44" class="sans" font-size="12" fill="#8ba0c8">Next.js 15, TypeScript, WebSockets, high-traffic portals (TechVerse)</text>
+    </g>
+  </g>
+
+  <!-- Divider -->
+  <line x1="462" y1="36" x2="462" y2="304" stroke="#16203a" stroke-width="1.5" stroke-dasharray="4 4" />
+
+  <!-- Right Column: 3-Slide Interests Carousel -->
+  <g transform="translate(490, 32)">
+    <rect x="0" y="0" width="168" height="24" rx="6" fill="#0d1428" stroke="#1e2c50" />
+    <text x="12" y="16" class="mono" font-size="11" font-weight="700" fill="#00f0ff">EXPEDITIONS_&amp;_LIFE</text>
+    <text x="0" y="52" class="sans" font-size="22" font-weight="700" fill="#f8fafc">Interests &amp; Philosophy</text>
+
+    <!-- 3 Segment Progress Indicators -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="120" height="5" rx="2.5" fill="#141e36" />
+      <rect x="0" y="0" width="0" height="5" rx="2.5" fill="#247bff" class="progress-fill-1" />
+
+      <rect x="135" y="0" width="120" height="5" rx="2.5" fill="#141e36" />
+      <rect x="135" y="0" width="0" height="5" rx="2.5" fill="#00f0ff" class="progress-fill-2" />
+
+      <rect x="270" y="0" width="120" height="5" rx="2.5" fill="#141e36" />
+      <rect x="270" y="0" width="0" height="5" rx="2.5" fill="#ff354f" class="progress-fill-3" />
+    </g>
+
+    <!-- Slide 1 -->
+    <g class="slide-1" transform="translate(0, 92)">
+      <rect width="395" height="178" rx="12" fill="#0b1224" stroke="#1c284a" />
+      <rect x="18" y="16" width="140" height="22" rx="4" fill="#070b16" stroke="#247bff" stroke-width="1" />
+      <text x="26" y="31" class="mono" font-size="10.5" font-weight="700" fill="#247bff">01 // NOCTURNAL DEV</text>
+      <text x="18" y="68" class="sans" font-size="17" font-weight="700" fill="#f8fafc">2:47 AM Deep Work Sprints</text>
+      <text x="18" y="94" class="sans" font-size="13" fill="#94a3b8">Thriving in midnight flow sessions where complex systems</text>
+      <text x="18" y="114" class="sans" font-size="13" fill="#94a3b8">crystallize. Guided by Clean Code &amp; Pragmatic Programmer</text>
+      <text x="18" y="134" class="sans" font-size="13" fill="#94a3b8">principles — shipping craft, not just code.</text>
+      <text x="18" y="160" class="mono" font-size="11" fill="#247bff">TAGS: #DeepWork #SystemDesign #ZeroDistractions</text>
+    </g>
+
+    <!-- Slide 2 -->
+    <g class="slide-2" transform="translate(0, 92)">
+      <rect width="395" height="178" rx="12" fill="#0b1224" stroke="#1c284a" />
+      <rect x="18" y="16" width="168" height="22" rx="4" fill="#070b16" stroke="#00f0ff" stroke-width="1" />
+      <text x="26" y="31" class="mono" font-size="10.5" font-weight="700" fill="#00f0ff">02 // BUILDER LEADERSHIP</text>
+      <text x="18" y="68" class="sans" font-size="17" font-weight="700" fill="#f8fafc">TechVerse Founder &amp; Community</text>
+      <text x="18" y="94" class="sans" font-size="13" fill="#94a3b8">Empowering 500+ student developers across university</text>
+      <text x="18" y="114" class="sans" font-size="13" fill="#94a3b8">campuses with AI workshops, hackathons, and incubator</text>
+      <text x="18" y="134" class="sans" font-size="13" fill="#94a3b8">mentorship to turn concepts into shipped products.</text>
+      <text x="18" y="160" class="mono" font-size="11" fill="#00f0ff">TAGS: #CommunityLead #Hackathons #Mentorship</text>
+    </g>
+
+    <!-- Slide 3 -->
+    <g class="slide-3" transform="translate(0, 92)">
+      <rect width="395" height="178" rx="12" fill="#0b1224" stroke="#1c284a" />
+      <rect x="18" y="16" width="170" height="22" rx="4" fill="#070b16" stroke="#ff354f" stroke-width="1" />
+      <text x="26" y="31" class="mono" font-size="10.5" font-weight="700" fill="#ff354f">03 // HARDWARE HACKING</text>
+      <text x="18" y="68" class="sans" font-size="17" font-weight="700" fill="#f8fafc">Soldering Iron &amp; Silicon Circuits</text>
+      <text x="18" y="94" class="sans" font-size="13" fill="#94a3b8">Bridging the virtual and physical realms. Soldering ESP32</text>
+      <text x="18" y="114" class="sans" font-size="13" fill="#94a3b8">boards, tuning I2C sensors, and compiling embedded C++</text>
+      <text x="18" y="134" class="sans" font-size="13" fill="#94a3b8">for low-power real-time field deployments.</text>
+      <text x="18" y="160" class="mono" font-size="11" fill="#ff354f">TAGS: #IoT #ESP32 #HardwarePrototyping</text>
+    </g>
+  </g>
+</svg>
